@@ -63,7 +63,7 @@ class Reviews extends ReviewsEntity
 
 	public function setText(string $text)
 	{
-		$this->review_text = strip_tags($text);
+		$this->review_text = strip_tags($text);//strip_tags - удаляет html теги перед отправкой в базу данных если они были введены
 	}
 
 	public static function createFromArray(array $fields): Reviews
